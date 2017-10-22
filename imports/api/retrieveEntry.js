@@ -2,9 +2,11 @@ var blockchain = require('mastercard-blockchain');
 var MasterCardAPI = blockchain.MasterCardAPI;
 
 var consumerKey = "Q8fBANqsrW0jmYDIxBYvM51TV37Yyk5AsIekZa5Sd7425069!20a7bb099d384d31b85349783a7149310000000000000000";   // You should copy this from "My Keys" on your project page e.g. UTfbhDCSeNYvJpLL5l028sWL9it739PYh6LU5lZja15xcRpY!fd209e6c579dc9d7be52da93d35ae6b6c167c174690b72fa
-var keyStorePath = "./money2020-sandbox-1508639485.pem"; // e.g. /Users/yourname/project/sandbox.p12 | C:\Users\yourname\project\sandbox.p12
+var keyStorePath = "keystore.p12"; // e.g. /Users/yourname/project/sandbox.p12 | C:\Users\yourname\project\sandbox.p12
 var keyAlias = "keyalias";   // For production: change this to the key alias you chose when you created your production key
 var keyPassword = "keystorepassword";   // For production: change this to the key alias you chose when you created your production key
+
+var counter = 0;
 
 // You only need to do initialize MasterCardAPI once
 //
@@ -35,5 +37,6 @@ blockchain.Block.list(requestData
 		console.log(data[0].signature);     //Output-->AN1rKryh8muZCbtqPu7gFmahvx9N6emWyqMNgTDXGcomHSWQK9Tt7J3CUY1yDCFU7bTH7jD3qCyyta4GX8RBYtVVNif8X8kx4
 		console.log(data[0].slot);     //Output-->1503572680
 		console.log(data[0].version);     //Output-->1
+    var response = JSON.parse(partitions[].entries[]);
 	}
 });
